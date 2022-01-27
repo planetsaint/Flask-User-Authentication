@@ -2,8 +2,9 @@
 A simple user authentication system using flask.
 
 How to use:
-
-	1. cd Flask-User-Authentication-System
+```
+	cd Flask-User-Authentication-System
+```
 	2. pip install -r requirements.txt
 	3. cd..
 	4. set FLASK_APP=project
