@@ -15,7 +15,7 @@ How to use:
 Date: 
 	30/10/2021
 	
-references:
+References:
 	bulma css framework: https://github.com/jgthms/bulma
 	Pretty Printed: Anthony
 
