@@ -1,0 +1,26 @@
+usage: 
+	cd project
+	pip install -r requirements.txt
+	cd..
+	set FLASK_APP=project
+	set FLASK_DEBUG=1
+	flask run
+	
+Author:
+	Christopher Morris
+	Jayan Williams
+	Chrissant Reynolds
+	Date: 30/10/2021
+	
+references:
+bulma css framework:
+	https://github.com/jgthms/bulma
+
+flask testing framework: 
+	git clone https://github.com/jarus/flask-testing.git
+flask:
+	on Python 3.7.6
+	Flask 2.0.1
+	Werkzeug 2.0.1
+	documentation:
+		https://flask.palletsprojects.com/en/2.0.x/

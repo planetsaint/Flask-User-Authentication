@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+  <style>
+    .progress {
+      background: rgba(255,255,255,0.1);
+      justify-content: flex-start;
+      border-radius: 100px;
+      align-items: center;
+      position: relative;
+      padding: 5px;
+      display: flex;
+      height: 40px;
+      width: 500px;
+      margin: auto;
+    }
+    
+    .progress-value {
+      animation: load 1.1s normal forwards;
+      box-shadow: 0 10px 40px -10px #fff;
+      border-radius: 100px;
+      background: #00D1B2;
+      height: 30px;
+      width: 0;
+    }
+    
+    @keyframes load {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+    
+    #content{
+        display:none;
+    }
+    
+    h1[type="text"] {
+      text-shadow: 2px 2px 5px black;
+    }
+    
+    p[type="data"] {
+      text-indent: 0%;
+      color: azure;
+      font-size: 0.8em;
+    }
+    
+    p:hover[type="data"] {
+      color: #00d1b2;
+      text-decoration: underline;
+    }
+    
+    h2[type="fetch"] {
+      text-align: center;
+    }
+    </style>
+    
+    <script>
+      function intersect() {
+        document.getElementById("content").style.display="block";
+        document.getElementById("pb").style.display="none";
+        document.getElementById("stupidbutton").style.display="none";
+        document.getElementById("fetch").style.display="none";
+      }
+    </script>
+</head>
+
+<div id="pb" class="progress">
+  <div class="progress-value"></div>
+</div>
+
+<h2 type="fetch" id="fetch"> Fetching user data...</h3>
+
+<br>
+
+<div class="stupidbutton" id="stupidbutton">
+  <button id="continue" onclick="intersect()" class="button is-block is-info is-medium is-fullwidth"
+  >Continue</button>
+</div>
+
+<div id="content" hidden>
+<h1 class="title" type="text">
+  You are signed in as: <p type="data"> {{ name }} </p>
+</h1>
+  <br>
+  <br>
+<h1 class="title" type="text">
+  Your email is : <p type="data"> {{ email }} <p>
+</h1>
+  <br>
+  <br>
+<h1 class="title" type="text">
+  Date & Time : <p type="data"> {{ date }} </p>
+</h1>
+</div>
+{% endblock %}

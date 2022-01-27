@@ -1,0 +1,6 @@
+Flask>=2.0.1
+SQLAlchemy>=1.4.23
+python-barcode>=0.13.1
+qrcode>=7.3
+pyotp
+pillow

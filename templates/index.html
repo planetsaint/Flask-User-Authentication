@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+  <style>
+    a:hover {
+     background-color: #00b89c;
+     text-decoration: unset;
+     }
+  </style>
+</head>
+<body>
+<h1 class="title">
+  Hi &#128075;
+</h1>
+<h2 class="subtitle">
+  Please <a href="{{ url_for('auth.login') }}" class="click"> Login</a> or 
+   <a href="{{ url_for('auth.signup') }}" class="click"> Sign Up.</a>
+</h2>
+</body>
+{% endblock %}
